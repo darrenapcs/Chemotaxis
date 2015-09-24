@@ -5,7 +5,7 @@ Bacteria [] colony;
  {     
 
  	size(500,500);
- 	colony = new Bacteria[100];
+ 	colony = new Bacteria[130];
  	for(int i = 0; i < colony.length; i++)
  	{
  		colony [i] = new Bacteria((int)(Math.random()*500),(int)(Math.random()*500));
@@ -80,7 +80,8 @@ if(myY < 0)
 }
 if(mousePressed && mouseButton == LEFT)
 {
-	mySize += 1;
+	mySize += 1 ;
+
 }
 if(mousePressed && mouseButton == RIGHT)
 {
@@ -88,14 +89,14 @@ if(mousePressed && mouseButton == RIGHT)
   cirY = mouseY;
 }
  fill(0,150,150); 
- ellipse(cirX, cirY, 20, 20);
+ ellipse(cirX, cirY, 15, 15);
 if(mySize > 50)
 {
 	mySize = 5;
 }
-if(get(myX,myY) != color(0))
+if(get(myX,myY) == color(0,150,150))
 {
-	mySize +=1;
+	mySize +=2;
 }
 }
 
